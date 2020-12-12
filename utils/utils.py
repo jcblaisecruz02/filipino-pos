@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from collections import Counter
 
 # Normalizes quotes and lowercases a string
 def normalize(line): return line.replace('“', '"').replace('”', '"').replace("‘", "'").replace("’", "'").lower()
