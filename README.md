@@ -1,12 +1,14 @@
 # Filipino POS
-This repository implements a simple LSTM-based part-of-speech tagger for Filipino, written for demo purposes. Pretrained weights and a prediction script is included, which you may use for tagging. A mode for training is also included to train a simple LSTM tagger using your own tagset and data.
+This repository implements a simple LSTM-based part-of-speech tagger for Filipino, written for demo purposes. Pretrained weights and a prediction script are included, which you may use for tagging. A mode for training is also included to train a simple LSTM tagger using your own tagset and data.
 
 # Requirements
 * PyTorch v1.x
 * NVIDIA GPU (For training. Not needed for inference/prediction.)
 
 # Tagging a Sentence
-To tag a sentence, you need a pretrained checkpoint. The folder `checkpoint` includes two files: `model.bin` which is the saved PyTorch weights, and `settings.bin` which contains vocabularies and model settings. Use the `main.py` script to tag a sentence as follows, making sure your example sentence is space-splittable:
+To tag a sentence, you need a trained tagger. 
+
+We provide a pretrained tagger checkpoint that you can use in the folder `checkpoint`, which includes two files: `model.bin` (the saved PyTorch weights), and `settings.bin` (contains vocabularies and model settings). Use the `main.py` script to tag a sentence as follows, making sure your example sentence is space-splittable:
 
 ```
 python filipino-pos/main.py \
